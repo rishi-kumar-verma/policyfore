@@ -1,0 +1,17 @@
+
+landing page => 
+    category - dropdown 
+    search - for series
+
+data page => 
+    canva watermark remove -
+    download button  -
+    line chart and bar chart swich -
+    dataset on graph page should be searchable and click to swich detaset -
+
+    bar chart - axix fix
+
+
+mobile responsive -
+
+
