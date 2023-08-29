@@ -1,17 +1,12 @@
+Hostinger
 
-landing page => 
-    category - dropdown 
-    search - for series
-
-data page => 
-    canva watermark remove -
-    download button  -
-    line chart and bar chart swich -
-    dataset on graph page should be searchable and click to swich detaset -
-
-    bar chart - axix fix
+username: policyfore@gmail.com
+password: test1@Policyfore
 
 
-mobile responsive -
+#####################
+
+Searh page - resent tags at bottom of search box.
+
 
 
