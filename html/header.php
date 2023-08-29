@@ -20,7 +20,7 @@
                     </div>
                     <!-- /.main-nav__main-navigation -->
                     <div class="main-nav__right">
-                        <a href="#">Subscribe</a>
+                        <a href="#" class="thm-btn data-one__btn">Subscribe</a>
                         <a class="sidemenu-icon side-content__toggler" href="#">MENU<i class="muzex-icon-menu"></i></a>
                     </div>
                     <!-- /.main-nav__right -->
