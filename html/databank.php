@@ -56,10 +56,6 @@ include('head.php');
 
                 <div class="pagination text-center d-flex justify-content-center">
                     <div class="post-pagination" id="pagination">
-                        <a href="#">1</a>
-                        <a href="#">2</a>
-                        <a href="#">3</a>
-                        <a href="#"><i class="fa fa-angle-right"></i></a>
                     </div><!-- /.post-pagination -->
                 </div><!-- /.text-center d-flex justify-content-center -->
 
@@ -117,7 +113,7 @@ include('head.php');
     window.onload = function() {
         displayCategory();
     }
-    var allArticles = articles;
+    var allArticles = JSON.parse(JSON.stringify(articles));;
 
     const itemsPerPage = 10; // Number of articles per page
     let currentPage = 1;
@@ -216,7 +212,8 @@ include('head.php');
         var filteredArticles;
 
         if (searchTerm == '' && selectedCategory == '') {
-            articles = allArticles;
+            articles.length = 0;
+            articles.push(...allArticles);
         }
 
         if (searchTerm == '' && selectedCategory !== '') {
@@ -243,7 +240,6 @@ include('head.php');
             articles.length = 0;
             articles.push(...filteredArticles);
         }
-
         currentPage = 1;
         renderArticles();
         renderPagination();
@@ -252,48 +248,7 @@ include('head.php');
 
     // Attach an event listener to the category filter dropdown
     categoryFilter.addEventListener("change", (event) => {
-        const value = event.target.value;
-        const searchInput = document.querySelector("#searchInput");
-        const searchTerm = searchInput.value.toLowerCase();
-        currentPage = 1;
-        if (searchTerm !== '' && value !== '') {
-            filteredArticles = allArticles.filter(article => {
-                return article.title.toLowerCase().includes(searchTerm) || article.author.toLowerCase()
-                    .includes(searchTerm);
-            }).filter(article => article.category.toLowerCase().trim() === value.toLowerCase().trim());
-            articles.length = 0;
-            articles.push(...filteredArticles);
-            console.log("articles 1", articles);
-
-        }
-
-        if (searchTerm == '' && value !== '') {
-            filteredArticles = allArticles.filter(article => article.category.toLowerCase().trim() === value.toLowerCase().trim());
-            articles.length = 0;
-            articles.push(...filteredArticles);
-            console.log("articles 2", articles);
-
-        }
-
-        if (searchTerm == '' && value == '') {
-            articles = allArticles;
-            console.log("articles 3", articles);
-
-        }
-
-        if (searchTerm !== '' && value == '') {
-            filteredArticles = allArticles.filter(article => {
-                return article.title.toLowerCase().includes(searchTerm) || article.author.toLowerCase()
-                    .includes(searchTerm);
-            });
-            articles.length = 0;
-            articles.push(...filteredArticles);
-            console.log("articles 4", articles);
-
-        }
-
-        renderArticles();
-        renderPagination();
+        search();
     });
     // Initial rendering
     renderArticles();
