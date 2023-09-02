@@ -50,6 +50,8 @@ font-family: 'Work Sans', sans-serif; */
     --heading-font: "Segoe UI", sans-serif;
     --special-font: "Segoe UI", sans-serif;
     --thm-base: #aaa081;
+    --thm-base-color: #ffffff;
+    --thm-base-backgroung-color: #e7e8e9;
     --thm-base-rgb: 170, 160, 129;
     --thm-black: #000000;
     --thm-black-rgb: 37, 41, 48;
@@ -59,7 +61,7 @@ body {
     font-family: var(--thm-font);
     font-size: 16px;
     line-height: 28px;
-    color: #ffffff;
+    color: var(--thm-base-color);
 }
 
 [dir=rtl] .thm__owl-carousel {
@@ -2989,7 +2991,7 @@ a:focus {
 }
 
 .event-one__single {
-    background-color: #fff;
+    background-color: var(--thm-base-backgroung-color);
     display: -webkit-box;
     display: flex;
     -webkit-box-align: center;
@@ -3388,8 +3390,8 @@ a:focus {
 /* event details */
 
 .event-details {
-    padding-top: 150px;
-    padding-bottom: 150px;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 .event-details__booking {
@@ -5097,7 +5099,7 @@ a:focus {
     left: 0;
     bottom: 0;
     right: 0;
-    background-color: #e7e8e9;
+    background-color: var(--thm-base-backgroung-color);
     opacity: 60%;
 }
 
@@ -6448,14 +6450,87 @@ a:focus {
 
 .data-one__btn {
     border: 2px solid #e5e5e5;
-    background-color: transparent;
+    background-color: black;
     font-size: 16px;
-    color: var(--thm-black);
+    color: var(--thm-base-color);
     border-radius: 12px;
 }
 
 .data-one__btn:hover {
     background-color: var(--thm-base);
-    border-color: var(--thm-base);
+    border-color: var(--thm-base-color);
     color: #fff;
+}
+
+.bd-highlight {
+    color: var(--thm-base);
+}
+
+select {
+    width: 20em;
+    height: 2.5em;
+    /* Set the desired width */
+    padding: 10px;
+    /* Add some padding for better spacing */
+    border: 1px solid #ccc;
+    /* Add a border */
+    border-radius: 5px;
+    /* Add rounded corners */
+    background-color: #fff;
+    /* Set background color */
+    font-size: 16px;
+    /* Set font size */
+    color: #333;
+    /* Set text color */
+}
+
+
+/* Style the select element */
+
+.bootstrap-select {
+    width: 20em !important;
+    height: 2.5em;
+    /* Set the desired width */
+    border: 1px solid #ccc;
+    /* Add a border */
+    border-radius: 5px;
+    /* Add rounded corners */
+    background-color: #fff;
+    /* Set background color */
+    font-size: 16px;
+    /* Set font size */
+    color: #333;
+    /* Set text color */
+}
+
+#downloadBtn {
+    border: 2px solid #0c0c0c;
+    background-color: black;
+    border-radius: 12px;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+#downloadBtn:hover {
+    background-color: var(--thm-base);
+    border-color: var(--thm-base-color);
+    color: #fff;
+}
+
+.flipped {
+    transform: scaleX(-1);
+}
+
+.page-item.active .page-link {
+    z-index: 1;
+    color: #fff;
+    background-color: var(--thm-base);
+    border-color: var(--thm-base-color);
+}
+
+@media screen and (max-width: 767px) {
+    .bootstrap-select .dropdown-menu {
+        transform: none !important;
+        font-size: small;
+    }
 }

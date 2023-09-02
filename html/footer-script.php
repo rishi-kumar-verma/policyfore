@@ -2,7 +2,7 @@
 
 <!-- Template JS -->
 
-<script src="assets/js/jquery.min.js"></script>
+
 <script src="assets/js/bootstrap.bundle.min.js"></script>
 <script src="assets/js/bootstrap-datepicker.min.js"></script>
 <script src="assets/js/bootstrap-select.min.js"></script>
@@ -18,6 +18,13 @@
 <script src="assets/js/wow.min.js"></script>
 <script src="assets/js/jquery.lettering.min.js"></script>
 <script src="assets/js/jquery.circleType.js"></script>
+<!-- Add chosen JS link -->
+<script src="https://cdn.jsdelivr.net/npm/chosen-js@1.8.7/chosen.jquery.min.js"></script>
+<!-- Add Chart.js link -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/chosen-js@1.8.7/chosen.min.css" rel="stylesheet" />
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
 
 <!-- Custom Scripts -->
 <script src="assets/js/theme.js"></script>
