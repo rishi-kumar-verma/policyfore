@@ -2,7 +2,7 @@
             <div class="container">
                 <div class="inner-container">
                     <div class="logo-box">
-                        <a href="index">
+                        <a href="/">
                             <img src="assets/images/logo-light-1-1.png" alt="" width="143">
                         </a>
                         <a href="#" class="side-menu__toggler"><i class="muzex-icon-menu"></i></a>
