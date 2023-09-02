@@ -103,7 +103,7 @@ include('head.php');
                 "author" => $row['Indicator_Name'],
                 "topic" => base64_decode($row['Topic'], true),
                 "category" => $row['category'],
-                "content" => $row['Short_definition'],
+                "content" => base64_decode($row['Short_definition']),
             );
             array_push($data, $temp);
         }
@@ -151,7 +151,6 @@ include('head.php');
                                 <h3><a href="indicator.php?search=${article.Code}">${article.title}</a></h3>
                                 <p style="color: #000000;">${article.content}</p>
                                 <small class="text-muted">${article.topic.split(":")[0].trim()}</small>
-                                <p style="color: #000000;">${article.content}</p>
                             </div>
                             <div class="event-one__btn-block">
                                 <a href="indicator.php?search=${article.Code}" class="thm-btn data-one__btn">Learn More</a>
